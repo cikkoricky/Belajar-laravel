@@ -14,10 +14,32 @@
                 <td>No</td>
                 <td>NIS</td>
                 <td>Nama</td>
-                <td>Jenis kelamin</td>
+                <td>J.kel</td>
                 <td>Kelas</td>
                 <td>Alamat</td>
             </tr>
+            <?php
+            $nomer=1;
+        ?>
+        @foreach ($databarang as $isi)
+
+        <tr>
+            <td>{{$nomer++}}</td>
+            <td>{{$isi->nis}}</td>
+            <td>{{$isi->nama}}</td>
+            <td>{{$isi->kel}}</td>
+            <td>{{$isi->kelas}}</td>
+            <td>{{$isi->alamat}}</td>
+            <td>
+                <a href="/kendali/edit/{{$isi->nis}}">
+                    <button class="btn btn-warning" title="edit data  : {{$isi->nis}}">Edit</button>
+                </a>
+                <a href="/kendali/hapus/{{$isi->id}}">
+                    <button class="btn btn-danger" title="hapus data  : {{$isi->nis}}">Hapus</button>
+                </a>
+            </td>
+        </tr>
+        $endforeach
         </table>
     </div>
 </body>

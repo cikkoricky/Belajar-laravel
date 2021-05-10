@@ -1,5 +1,5 @@
 <?php
-
+use App\Htpp\Controllers\Kendali;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-route::get('/siswa','kendali@index');
+Route::get('/',[Kendali::class, 'index']);
+
+Route::get('/Kendali/siswa', [Kendali::class, 'siswa']);
