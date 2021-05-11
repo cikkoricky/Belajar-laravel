@@ -1,5 +1,6 @@
 <?php
-use App\Htpp\Controllers\Kendali;
+use App\Http\Controllers;
+use App\Http\Controllers\Kendali;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/',[Kendali::class, 'index']);
+Route::get('/', [Kendali::class ,'index']);
 
-Route::get('/Kendali/siswa', [Kendali::class, 'siswa']);
+Route::view('/siswa','siswa');
+
+Route::get('/simpan',[Kendali::class,'simpan']);
+
+Route::get('/update',[Kendali::class,'update']);
+
+Route::get('/edit/{nis}',[Kendali::class,'edit']);
+
+Route::get('/hapus/{nis}',[Kendali::class,'hapus']);
+
+/*
+Route::get('/siswa',function() {
+    return view('index');
+});
+
+Route::get('/siswa',function($data_siswa ='') {
+    return view('siswa',['']);
+});
