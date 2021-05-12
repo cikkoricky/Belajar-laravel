@@ -12,9 +12,9 @@
     <div class="container">
         <h1 align="center">Data Siswa Baru</h1>
         <a href="/siswa">
-            <button class="btn btn-info">Tambah</button>
+            <button class="btn btn-info">Tambah Data Siswa</button>
         </a>
-
+        <br>
         <table style="background-color: darkgrey" class="table table-bordered">
             <tr>
                 <th>No</th>

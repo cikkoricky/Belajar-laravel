@@ -24,6 +24,7 @@ class Kendali extends Controller
         ]);
         return redirect('/');
     }
+
     public function edit($nis){
         $data=DB::table('murid')->where('nis',$nis)->get();
         return view('edit',['siswa'=>$data]);

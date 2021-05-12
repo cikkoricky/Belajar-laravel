@@ -26,11 +26,3 @@ Route::get('/edit/{nis}',[Kendali::class,'edit']);
 
 Route::get('/hapus/{nis}',[Kendali::class,'hapus']);
 
-/*
-Route::get('/siswa',function() {
-    return view('index');
-});
-
-Route::get('/siswa',function($data_siswa ='') {
-    return view('siswa',['']);
-});
